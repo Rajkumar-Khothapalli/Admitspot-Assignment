@@ -38,3 +38,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# http file
+D:\AdmitSpot-Assignment\contact-management-system\app.http

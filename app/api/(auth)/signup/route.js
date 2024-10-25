@@ -2,7 +2,6 @@ import { NextResponse } from "next/server";
 import bcrypt from "bcrypt";
 import { retriveUser, createUser } from "@/sqlQueries/userAuth";
 import userSchema from "@/joi-validations/data-valiadtion-signup";
-import Joi from "joi";
 
 export async function POST(req) {
   try {

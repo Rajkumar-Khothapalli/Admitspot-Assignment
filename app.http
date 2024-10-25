@@ -1,5 +1,5 @@
 //Register new user in database --Passed
-POST admitspot-assignment-ghux.vercel.app/api/signup
+POST https://admitspot-assignment.vercel.app/api/signup
 Content-Type: application/json
 
 {
@@ -13,14 +13,13 @@ Content-Type: application/json
 //Login user --- Passed
 ####
 POST http://localhost:3000/api/login
-Content-Type: application/json
+Content-Type: 'application/json'
 
 {
   "identifier": "testing",
   "password": "test@1234"
 }
 
--------------------------- Contacts API --------------------------------------
 //Create Contact --- passed
 ####
 POST https://admitspot-assignment.vercel.app/api/contacts/add-contact

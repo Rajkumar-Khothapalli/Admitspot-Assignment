@@ -6,7 +6,7 @@ import dotenv from "dotenv";
 dotenv.config();
 const jwt = require("jsonwebtoken");
 
-// Joi schema for login validation
+//Joi schema for login validation
 const loginSchema = Joi.object({
   identifier: Joi.string().min(3).required(), // can be username or email
   password: Joi.string().min(8).required(),
@@ -16,7 +16,6 @@ export async function POST(req) {
   try {
     const body = await req.json();
     const { identifier, password } = body;
-    console.log("Incoming request body:", body);
 
     // Validate login data using Joi
     const { error } = loginSchema.validate({ identifier, password });

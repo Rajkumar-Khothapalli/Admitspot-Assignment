@@ -12,7 +12,7 @@ Content-Type: application/json
 
 //Login user --- Passed
 ####
-POST http://localhost:3000/api/login
+POST https://admitspot-assignment.vercel.app/api/login
 Content-Type: 'application/json'
 
 {
@@ -20,7 +20,7 @@ Content-Type: 'application/json'
   "password": "test@1234"
 }
 
-//Create Contact --- passed
+//Create Contact ----- passed
 ####
 POST https://admitspot-assignment.vercel.app/api/contacts/add-contact
 Content-Type: application/json
@@ -40,11 +40,11 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc
 
 #####
 //Get contact with filters
-GET http://localhost:3000/api/contacts/get-filter-contacts?userId=1&name=Varshit&email=varshit@gmail.com&timezone=UTC&convertTimezone=HST
+GET https://admitspot-assignment.vercel.app/api/contacts/get-filter-contacts?userId=1&name=Varshit&email=varshit@gmail.com&timezone=UTC&convertTimezone=HST
 
 #####
 //Update Contact --- passed
-PUT http://localhost:3000/api/contacts/update-contact?userId=1&contactId=4
+PUT https://admitspot-assignment.vercel.app/api/contacts/update-contact?userId=1&contactId=4
 Content-Type: application/json
 
 {
@@ -54,4 +54,4 @@ Content-Type: application/json
 
 #####
 //Delete Contact ---- passed
-DELETE http://localhost:3000/api/contacts/delete-contact?userId=1&contactId=4
+DELETE https://admitspot-assignment.vercel.app/api/contacts/delete-contact?userId=1&contactId=4

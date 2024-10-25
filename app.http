@@ -1,0 +1,58 @@
+//Register new user in database --Passed
+POST http://localhost:3000/api/signup
+Content-Type: application/json
+
+{
+  "username": "testing",
+  "name": "testtest",         
+  "email": "test@email.com",
+  "password": "test@1234",  
+  "gender": "other" 
+}
+
+//Login user --- Passed
+####
+POST http://localhost:3000/api/login
+Content-Type: application/json
+
+{
+  "identifier": "testing",
+  "password": "test@1234"
+}
+
+-------------------------- Contacts API --------------------------------------
+//Create Contact --- passed
+####
+POST http://localhost:3000/api/contacts/add-contact
+Content-Type: application/json
+
+{
+    "userId": 1,
+    "name" : "Mahesh",
+    "email": "mahesh2@gmail.com",
+    "phoneNumber": "123456689",
+    "address": "29-184, Hyderabad, Telangana"
+}
+
+#####
+//Get all contacts with the user id
+GET http://localhost:3000/api/contacts/get-contacts/?userId=23
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3RpbmciLCJlbWFpbCI6InRlc3RAZW1haWwuY29tIiwiaWF0IjoxNzI5ODM4MjA4fQ.g3xDc4nY0QNPjR79AH-5rIjAsrH4bNlpY5KiJqDiYGg
+
+#####
+//Get contact with filters
+GET http://localhost:3000/api/contacts/get-filter-contacts?userId=1&name=Varshit&email=varshit@gmail.com&timezone=UTC&convertTimezone=HST
+
+#####
+//Update Contact --- passed
+PUT http://localhost:3000/api/contacts/update-contact?userId=1&contactId=4
+Content-Type: application/json
+
+{
+   "name": "Rajkumar"
+}
+
+
+#####
+//Delete Contact ---- passed
+DELETE http://localhost:3000/api/contacts/delete-contact?userId=1&contactId=4
